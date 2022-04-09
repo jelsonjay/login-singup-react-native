@@ -14,7 +14,7 @@ const Styles = StyleSheet.create({
     color: Colors.gray,
     paddingLeft: 20,
     borderBottomWidth: 0.5,
-    fontSize: 16,
+    fontSize: 14,
   },
 });
 

@@ -32,7 +32,7 @@ export default function SinginScreen({navigation}) {
           <View style={{marginTop: 40, alignItems: 'center'}}>
             <Text
               style={{fontWeight: 'bold', fontSize: 27, color: Colors.black}}>
-              Wecome,
+              Welcome
             </Text>
             <Text
               style={{fontWeight: 'bold', fontSize: 20, color: Colors.gray}}>
@@ -74,7 +74,7 @@ export default function SinginScreen({navigation}) {
           <View style={styles.buttonsWrap}>
             <View style={styles.buttons}>
               <Text style={{fontWeight: 'bold', fontSize: 16}}>
-                Sign in with
+                Log in with
               </Text>
               <Image
                 source={require('../assets/google.png')}
@@ -84,7 +84,7 @@ export default function SinginScreen({navigation}) {
             <View style={{width: 10}} />
             <View style={styles.buttons}>
               <Text style={{fontWeight: 'bold', fontSize: 16}}>
-                Sign in with
+                Log in with
               </Text>
               <Image
                 source={require('../assets/linkedin.png')}

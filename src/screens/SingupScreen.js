@@ -19,16 +19,30 @@ export default function SingupScreen({navigation}) {
     <SafeAreaView style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <View style={styles.brand}>
-          <Text style={styles.brandText1}>Best</Text>
-          <Text style={styles.brandText2}>News</Text>
+          <Image
+            style={styles.logo}
+            source={require('../assets/instagram.png')}
+          />
         </View>
         <View style={{marginTop: 40, alignItems: 'center'}}>
           <Text style={{fontWeight: 'bold', fontSize: 27, color: Colors.black}}>
-            Wecome Back,
+            Sign Up
           </Text>
+        </View>
+        <View style={styles.textWrap}>
           <Text style={{fontWeight: 'bold', fontSize: 20, color: Colors.gray}}>
-            Sign up to continue
+            Already have an account?
           </Text>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Text
+              style={{
+                fontWeight: 'bold',
+                color: Colors.primary,
+                marginLeft: 5,
+              }}>
+              Log in
+            </Text>
+          </TouchableOpacity>
         </View>
         <View style={{marginTop: 20}}>
           <View style={Styles.inputContainer}>
@@ -88,21 +102,6 @@ export default function SingupScreen({navigation}) {
             />
           </View>
         </View>
-        <View style={styles.textWrap}>
-          <Text style={{fontWeight: 'bold', color: Colors.gray}}>
-            Already have an account?
-          </Text>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Text
-              style={{
-                fontWeight: 'bold',
-                color: Colors.primary,
-                marginLeft: 5,
-              }}>
-              Sing in
-            </Text>
-          </TouchableOpacity>
-        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -115,18 +114,13 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
   },
   brand: {
-    flexDirection: 'row',
-    marginTop: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  brandText1: {
-    fontWeight: 'bold',
-    fontSize: 25,
-    color: Colors.primary,
-  },
-  brandText2: {
-    fontWeight: 'bold',
-    fontSize: 25,
-    color: Colors.black,
+  logo: {
+    marginTop: '15%',
+    height: 128,
+    width: 128,
   },
   space: {
     marginTop: '15%',
@@ -150,6 +144,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 20,
+    marginBottom: 40,
   },
 
   buttons: {
@@ -171,7 +166,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'center',
-    marginTop: 50,
-    marginBottom: 60,
+    marginTop: 10,
+    marginBottom: 1,
   },
 });
