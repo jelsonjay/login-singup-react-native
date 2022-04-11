@@ -3,8 +3,6 @@ import {
   StyleSheet,
   TextInput,
   Text,
-  KeyboardAvoidingView,
-  Platform,
   Image,
   TouchableWithoutFeedback,
   Keyboard,
@@ -124,7 +122,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    marginTop: '15%',
+    marginTop: '20%',
     height: 128,
     width: 128,
   },
